@@ -1,5 +1,5 @@
 # codetest
-# Technical Challenge
+## Technical Challenge
 
 We understand your time is precious, but as discussed, we ask each applicant to take on our
 small challenges.
