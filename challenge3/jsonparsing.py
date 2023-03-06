@@ -11,7 +11,6 @@ def jsonpars(obj, key):
     return y
 
 
-# some JSON:
 obj =  '''{"employees":
     {
         "name": "Alice",
@@ -21,10 +20,13 @@ obj =  '''{"employees":
     "firm":
     {
       "name": "Charlie's Waffle Emporium",
-      "location": "CA"
+      "location":  {
+          "country": "INDIA",
+          "state": "RJ"
+      }
     }
 }'''
 
-key = "firm/name"
+key = "firm/location/state"
 
 print(jsonpars(obj, key))   
