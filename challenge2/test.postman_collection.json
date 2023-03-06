@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "19309d13-4181-43e7-ab22-a1a2b0e5e757",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "931321"
+	},
+	"item": [
+		{
+			"name": "vm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "subscriptionId",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "vmName",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "GET https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.Compute/virtualMachines/{{vmName}}?api-version=2022-11-01",
+					"protocol": "GET https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{subscriptionId}}",
+						"resourceGroups",
+						"{{resourceGroupName}}",
+						"providers",
+						"Microsoft.Compute",
+						"virtualMachines",
+						"{{vmName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2022-11-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "availabilitySetName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "subscriptionId",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "vmName",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}?api-version=2022-11-01",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{subscriptionId}}",
+						"resourceGroups",
+						"{{resourceGroupName}}",
+						"providers",
+						"Microsoft.Compute",
+						"availabilitySets",
+						"{availabilitySetName}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2022-11-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bearer_token",
+			"value": "Bearer testingggggggggggggggggggggggggggggggggggggggggggggg",
+			"type": "string"
+		},
+		{
+			"key": "subscriptionId",
+			"value": "subscriptio",
+			"type": "string"
+		},
+		{
+			"key": "resourceGroupName",
+			"value": "resourceGroupName",
+			"type": "string"
+		},
+		{
+			"key": "vmName",
+			"value": "test"
+		},
+		{
+			"key": "availabilitySetName",
+			"value": "temp"
+		}
+	]
+}
