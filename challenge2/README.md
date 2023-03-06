@@ -1,1 +1,3 @@
 # codetest
+
+Postman collection
