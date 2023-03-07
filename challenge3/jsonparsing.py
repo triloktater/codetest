@@ -9,24 +9,3 @@ def jsonpars(obj, key):
     except:
         return    
     return y
-
-
-obj =  '''{"employees":
-    {
-        "name": "Alice",
-        "role": "dev",
-        "nbr": 1
-      },
-    "firm":
-    {
-      "name": "Charlie's Waffle Emporium",
-      "location":  {
-          "country": "INDIA",
-          "state": "RJ"
-      }
-    }
-}'''
-
-key = "firm/location/state"
-
-print(jsonpars(obj, key))   
